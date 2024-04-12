@@ -76,6 +76,16 @@ console.log('Adding beer', addItem('beer'));
 console.log('Adding bears', addItem('bears'));
 console.log('Number of items in basket:', basket.length);
 
+// Function to remove item from the basket
+function removeItem(item) {
+  const index = basket.indexOf(item);
+  if (index !== -1) {
+    const removedItem = basket.splice(index, 1)[0]; // Remove first matching item
+    return removedItem;
+  }
+  return null; // Item not found
+}
+
 // DO NOT MODIFY
 // Used for automated testing
 try {
